@@ -1,7 +1,6 @@
 from sqlalchemy import inspect
 
-from database import engine
-
+from .database import engine
 
 def discover_relationships(schema="public"):
     inspector = inspect(engine)

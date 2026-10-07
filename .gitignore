@@ -29,3 +29,5 @@ htmlcov/
 
 # ChromaDB local vector store
 data/chroma/
+
+/tatusgit status

@@ -1,6 +1,6 @@
 from sqlalchemy import inspect
 
-from database import engine
+from .database import engine
 
 
 def get_database_inspector():

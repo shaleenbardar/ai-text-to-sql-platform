@@ -1,4 +1,4 @@
-from inspector import (
+from text2sql.metadata.inspector import (
     get_tables,
     get_columns,
     get_primary_keys,

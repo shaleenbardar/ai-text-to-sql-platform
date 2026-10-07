@@ -1,5 +1,6 @@
-from relationships import discover_relationships
-
+from text2sql.metadata.descriptions import (
+    get_column_description,
+)
 
 relationships = discover_relationships()
 
