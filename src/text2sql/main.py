@@ -1,15 +1,17 @@
-import os
+from fastapi import FastAPI
 
-from dotenv import load_dotenv
-
-
-load_dotenv()
+from text2sql.api.metadata import router as metadata_router
 
 
-def main():
-    environment = os.getenv("APP_ENV", "unknown")
-    print(f"Application environment: {environment}")
+app = FastAPI(
+    title="AI-Powered Text-to-SQL Analytics Platform",
+    version="0.1.0",
+)
 
 
-if __name__ == "__main__":
-    main()
+app.include_router(metadata_router)
+
+
+@app.get("/health")
+def health():
+    return {"status": "ok"}
