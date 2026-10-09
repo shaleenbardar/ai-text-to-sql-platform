@@ -11,9 +11,10 @@ client = chromadb.PersistentClient(
 )
 
 
-def get_collection(
-    name="metadata",
-):
+def get_collection(name="metadata"):
     return client.get_or_create_collection(
         name=name,
+        metadata={
+            "hnsw:space": "cosine",
+        },
     )
